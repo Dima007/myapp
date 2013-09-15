@@ -3,19 +3,24 @@ development:
   encoding: unicode
   database: myapp_development
   pool: 5
+  timeout: 5000
   username: dima
   password: 1234
+
 test:
   adapter: postgresql
   encoding: unicode
   database: myapp_test
   pool: 5
+  timeout: 5000
   username: dima
   password: 1234
+
 production:
   adapter: postgresql
   encoding: unicode
   database: myapp_production
   pool: 5
+  timeout: 5000
   username: dima
   password: 1234
