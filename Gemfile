@@ -32,6 +32,10 @@ group :doc do
 end
 
 gem 'rails_12factor', group: :production
+
+group :development do
+	gem 'rspec-rails', '~> 2.0'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
