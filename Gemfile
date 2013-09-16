@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -34,7 +32,19 @@ end
 gem 'rails_12factor', group: :production
 
 group :development do
+	gem 'mysql2'
+end
+
+group :test do
 	gem 'rspec-rails', '~> 2.0'
+	gem 'factory_girl'
+	gem 'capybara'
+	gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
+  	gem 'email_spec'
+end
+
+group :production do
+	gem 'pg'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
