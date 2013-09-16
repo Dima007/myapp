@@ -31,6 +31,8 @@ end
 
 gem 'rails_12factor', group: :production
 
+gem 'bootstrap-sass', '2.1'
+
 group :development, :test do
 	gem 'mysql2'
 	gem 'rspec-rails', '~> 2.0'
