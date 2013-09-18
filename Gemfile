@@ -48,6 +48,7 @@ group :test do
   	gem 'email_spec'
   	gem 'rb-inotify'
   	gem 'libnotify'
+  	gem 'factory_girl_rails'
 end
 
 group :production do
