@@ -58,6 +58,13 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+#For adding fake-users
+gem 'faker'
+
+# For paginate with bootstrap configs
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
