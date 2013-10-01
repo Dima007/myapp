@@ -9,16 +9,25 @@ Myapp::Application.routes.draw do
   get '/contact'    => 'static_pages#contact'
 
   #For Users
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   #For Session
   resources :sessions, only: [:new, :create, :destroy]
+
+  #for micropost
+  resources :microposts, only: [:create, :destroy]
+
+  #for relationships
+  resources :relationships, only: [:create, :destroy]
 
   get '/signup'     => 'users#new'
   get '/signin'     => 'sessions#new'
   delete '/signout' => 'sessions#destroy'
 
-  resources :microposts, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
